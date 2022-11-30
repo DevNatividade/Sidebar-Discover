@@ -30,19 +30,21 @@ body {
 }
 
 .sidebar {
-    width: 78px;
-    height: 100%;
+    width: 70px;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     background-color: var(--green);
+
+    transition: all .1s;
 }
 
 .container-top {
     width: 100%;
-    height: 10%;
+    height: 70px;
     padding: 0 15px;
 
     display: flex;
@@ -84,12 +86,15 @@ nav li {
 
     border-radius: 10px;
 
-    transition: all .3s;
-
     display: flex;
     justify-content: center;
 }
+nav li p {
+    opacity: 0;
 
+    
+    transition: all 0.2s;
+}
 nav li:hover {
     background-color: var(--light-green);
 }
@@ -123,7 +128,7 @@ nav li input::placeholder {
 }
 
 .container-bottom-person {
-    display: none;    
+    display: none;     
 }
 
 .container-bottom-person img {
@@ -191,6 +196,7 @@ main {
 #container-top-center {
     display: flex;
     justify-content: space-between;
+    padding: 0 15px;
 }
 
 /*Appear logo*/
@@ -212,6 +218,10 @@ main {
   new class at nav > input and paragraphs*/
 #list-text-appear {
     display: flex;
+    align-items: center;
+    width: 100%;
+
+    opacity: 1;
 }
 
 /*align on center btn-loggof
