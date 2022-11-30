@@ -1,17 +1,19 @@
-// adiciona elementos 'li' na lista ordenada
-function addLinks(image, text) {
-    return `
-    <li>
-        <img src="./Assets/${image}.svg" alt="logo ${image}">
-        <a href="#">${text}</a>
-    </li>  
-    `
+const sidebar = document.querySelector('.sidebar');
+const containerTop = document.querySelector('.container-top'); 
+const logo = document.querySelector('.logo')
+const list = document.querySelector('li'); 
+//const appearParagraph = document.querySelectorAll('.sidebar-menu-icons-name')
+const appearInput = document.querySelector('input'); 
+const containerBottom = document.querySelector('.container-bottom'); 
+const containerBottomPerson = document.querySelector('.container-bottom-person'); 
+
+function appearSidebar() {
+    sidebar.setAttribute('id', 'opened-sidebar');
+    containerTop.setAttribute('id', 'container-top-center')
+    logo.setAttribute('id','logo')
+    list.setAttribute('id','list')
+    //appearInput.setAttribute('id','list-text-appear')
+    appearParagraph.setAttribute('id','list-text-appear')
+    containerBottom.setAttribute('id','container-bottom-center')
+    containerBottomPerson.setAttribute('id','container-bottom-person-appear')
 }
-// chama a função addLinks para adicionar uma 'li'
-document.querySelector('.sideLinks').innerHTML =
-    addLinks('search', 'Buscar') +
-    addLinks('grid', 'Dashboard') + 
-    addLinks('pet', 'Pets') +
-    addLinks('user', 'Clientes') +
-    addLinks('vet', 'Vets') +
-    addLinks('settings', 'Ajustes')

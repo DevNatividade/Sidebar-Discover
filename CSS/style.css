@@ -13,83 +13,220 @@
     padding: 0;
     box-sizing: border-box;
 
-    list-style: none;
-
     font-family: 'Poppins', sans-serif;
+
+    list-style: none;
+    text-decoration: none;
+}
+
+img {
+    width: 25px;
 }
 
 body {
     width: 100vw;
     height: 100vh;
-
     display: flex;
-
-    background: var(--body-bg-color);
-    color: var(--text-color);
-}
-
-a {
-    color: var(--text-color);
 }
 
 .sidebar {
-    width: 250px;
-    height: 100vh;
+    width: 78px;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
-    background: var(--green);
+    background-color: var(--green);
 }
 
-header, nav {
-    padding: 14px;
-}
+.container-top {
+    width: 100%;
+    height: 10%;
+    padding: 0 15px;
 
-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
-header h1 {
-    font-size: 24px;
+.container-top .logo {
+    display: none;
+}
+
+.btn-menu {
+    display: flex;
+    border: 0;
+    cursor: pointer;
+
+    background-color: transparent;
 }
 
 nav {
-    flex: 1;
+    width: 100%;
+    height: 80%;
+    padding: 0 15px;
 }
 
-nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+nav input, nav .sidebar-menu-icons-name {
+    display: none;
 }
 
-footer {
-    padding: 4px 14px 4px;
+nav li {
+    height: 50px;
+    margin-bottom: 8px;
+    padding: 0 8px;
 
     display: flex;
     align-items: center;
-
-    background: var(--light-green);
-}
-
-footer > img {
-    width: 45px;
-    height: 45px;
-
-    margin-right: 10px;
+    justify-content: center;
+    gap: 1rem;
 
     border-radius: 10px;
+
+    transition: all .3s;
+
+    display: flex;
+    justify-content: center;
 }
 
-footer img ~ img {
-    width: 24px;
-    height: 24px;
-    margin-left: 36px;
+nav li:hover {
+    background-color: var(--light-green);
 }
 
-.page {
+.sidebar-menu-icons-name {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+nav li:nth-child(1) {
+    background-color: var(--light-green);
+}
+
+nav li input {
+    height: 100%;
+    width: 100%;
+
+    border: 0;
+    outline: none;
+    background: transparent;
+
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+nav li input::placeholder {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.container-bottom-person {
+    display: none;    
+}
+
+.container-bottom-person img {
+    width: 45px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.container-bottom-person .description {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container-bottom-person p {
+    font-size: 12px;
+}
+
+.btn-loggof {
+    display: flex;
+    border: 0;
+    cursor: pointer;
+
+    background-color: transparent;
+}
+
+.container-bottom {
+    width: 100%;
+    height: 10%;
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--light-green);
+}
+
+main {
+    width: 100%;
+    height: 100%;
     padding: 1rem;
+
+    font-weight: 600;
+    color: var(--text-color);
+
+    background-color: var(--body-bg-color);
+}
+
+/*after a click on btn-menu*/
+
+/*Sidebar opened after a click
+  new class at <div class="sidebar">*/
+#opened-sidebar {
+    width: 250px;
+    height: 100%;
+
+    background-color: var(--green);
+}
+
+/*btn-menu alingned on center
+  new class at <div class="container-top">*/
+#container-top-center {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Appear logo*/
+#logo {
+    font-weight: 600;
+    font-size: 24px;
+    display: block;
+}
+
+/*align on center the imgs
+  new class at nav li*/
+#list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* get the texts
+  new class at nav > input and paragraphs*/
+#list-text-appear {
+    display: flex;
+}
+
+/*align on center btn-loggof
+  new class at <div class="container-bottom">*/
+#container-bottom-center {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*get off the img and de paragraph
+  new class at <div class="container-bottom-person">*/
+#container-bottom-person-appear {
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+
+    display: flex;
 }

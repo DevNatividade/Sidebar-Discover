@@ -10,31 +10,69 @@
         </head>
 
         <body>
-            <div class="sidebar">
-                <header>
-                    <h1>DevN</h1>
-                    <img src="./Assets/menu.svg" alt="lgo menu">
-                </header>
+            <header>
+                <div class="sidebar">
+                    <div class="container-top">
+                        <p class="logo">DevN</p>
 
-                <nav>
-                    <ul class="sideLinks">           
-                    </ul>
-                </nav>
-
-                <footer>
-                    <img src="https://avatars.githubusercontent.com/u/113365783?v=4" alt="Imagem do perfil de DevN no Github">
-                    <div>
-                        <h3>Vagner Jr.</h3>
-                        <p>veterinário</p>
+                        <button class="btn-menu" onclick="appearSidebar()">
+                            <img onclick="toggleSidebar()" class="img-btn-menu" src="./Assets/menu.svg" alt="imagem do incone menu">
+                        </button>
                     </div>
-                    <img id="arrow" src="./Assets/log-out.svg" alt="logo back">
-                </footer>
-            </div>
+    
+                    <nav>
+                        <ul class="sidebar-menu-icons">       
+                            <li>
+                                <img src="./Assets/search.svg" alt="imagem do icone buscar">
+                                <input type="text" placeholder="Buscar">
+                            </li>
+    
+                            <li>
+                                <img src="./Assets/grid.svg" alt="imagem do icone grid">
+                                <p class="sidebar-menu-icons-name">Dashboard</p>
+                            </li>
+    
+                            <li>
+                                <img src="./Assets/pet.svg" alt="imagem do icone pet">
+                                <p class="sidebar-menu-icons-name">Pets</p>
+                            </li>
+    
+                            <li>
+                                <img src="./Assets/user.svg" alt="imagem do icone user">
+                                <p class="sidebar-menu-icons-name">Clientes</p>
+                            </li>
+    
+                            <li>
+                                <img src="./Assets/vet.svg" alt="imagem do icone veterinário">
+                                <p class="sidebar-menu-icons-name">Vets</a>
+                            </li>
+    
+                            <li>
+                                <img src="./Assets/settings.svg" alt="imagem do icone configurações">
+                                <p class="sidebar-menu-icons-name">Ajustes</p>
+                            </li>
+                        </ul>
+                    </nav>
+    
+                    <div class="container-bottom">
+                        <div class="container-bottom-person">
+                            <img src="https://avatars.githubusercontent.com/u/113365783?v=4" alt="Imagem do perfil de DevN no Github">
+                            <div class="description">
+                                <b>Vagner Jr.</b>
+                                <p>veterinário</p>
+                            </div>
+                        </div>
+                        <button class="btn-loggof">
+                            <img src="./Assets/log-out.svg" alt="imagem do icone loggout">
+                        </button>
+                    </div>
+                </div>
+            </header>
 
-            <div class="page">
-                <h1>Dashboard</h1>
-            </div>
+            <main>
+                <h1>Dashboard</h1>  
+            </main>
             
-            <script src="./JAVASCRIPT/main.js"></script>
+            <script defer src="./JAVASCRIPT/main.js"></script>
         </body>
     </html>
