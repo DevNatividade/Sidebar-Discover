@@ -21,6 +21,10 @@ img {
     width: 25px;
 }
 
+body{
+    width: 100vw;
+}
+
 .sidebar {
     position: absolute;
     width: 70px;
@@ -33,7 +37,6 @@ img {
 }
 
 .container-top {
-    width: 100%;
     height: 70px;
     padding: 0 15px;
     display: flex;
@@ -53,7 +56,6 @@ img {
 
 nav {
     position: relative;
-    width: 100%;
     height: 80%;
     padding: 0 15px;
     z-index: 1;
