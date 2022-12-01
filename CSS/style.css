@@ -12,9 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     font-family: 'Poppins', sans-serif;
-
     list-style: none;
     text-decoration: none;
 }
@@ -30,23 +28,21 @@ body {
 }
 
 .sidebar {
+    position: absolute;
     width: 70px;
     height: 100vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     background-color: var(--green);
-
-    transition: all .1s;
+    transition: all .2s;
 }
 
 .container-top {
+    position: relative;
     width: 100%;
     height: 70px;
     padding: 0 15px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,17 +50,19 @@ body {
 
 .container-top .logo {
     display: none;
+    position: relative;
 }
 
 .btn-menu {
+    position: relative;
     display: flex;
     border: 0;
     cursor: pointer;
-
     background-color: transparent;
 }
 
 nav {
+    position: relative;
     width: 100%;
     height: 80%;
     padding: 0 15px;
@@ -75,28 +73,42 @@ nav input, nav .sidebar-menu-icons-name {
 }
 
 nav li {
+    position: absolute;
     height: 50px;
     margin-bottom: 8px;
     padding: 0 8px;
-
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-
     border-radius: 10px;
-
     display: flex;
     justify-content: center;
+    transition: all .2s;
 }
-nav li p {
-    opacity: 0;
 
-    
-    transition: all 0.2s;
+nav li:nth-child(2) {
+    top: 4rem;
 }
-nav li:hover {
-    background-color: var(--light-green);
+nav li:nth-child(3) {
+    top: 8rem;
+}
+nav li:nth-child(4) {
+    top: 12rem;
+}
+nav li:nth-child(5) {
+    top: 16rem;
+}
+nav li:nth-child(6) {
+    top: 20rem;
+}
+
+nav li p{
+    transition: all .3s;
+}
+
+nav li p:hover {
+    color: var(--light-grey)
 }
 
 .sidebar-menu-icons-name {
@@ -106,16 +118,15 @@ nav li:hover {
 
 nav li:nth-child(1) {
     background-color: var(--light-green);
+    margin: 0 14px 0 0;
 }
 
 nav li input {
     height: 100%;
     width: 100%;
-
     border: 0;
     outline: none;
     background: transparent;
-
     font-size: 16px;
     font-weight: 600;
     color: var(--text-color);
@@ -239,4 +250,11 @@ main {
     gap: 1rem;
 
     display: flex;
+}
+
+main {
+    
+    position: absolute;
+    left: 70px;
+    transition: all .2s;
 }
