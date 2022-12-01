@@ -15,7 +15,7 @@ function appearSidebar() {
 
     if (sidebar) {
         document.querySelector('.sidebar').style.width = "250px";
-        document.querySelector('main').style.left = "250px"
+        document.querySelector('main').style.left = "250px";
         
         containerTop.setAttribute('id', 'container-top-center')
         logo.setAttribute('id','logo')
